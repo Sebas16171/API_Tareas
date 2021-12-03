@@ -1,0 +1,28 @@
+{
+  "name": "API_Tareas",
+  "version": "1.0.0",
+  "description": "REST API que controla un sistema de gestión de tareas registradas por usuarios",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebas16171/API_Tareas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebas16171/API_Tareas/issues"
+  },
+  "homepage": "https://github.com/Sebas16171/API_Tareas#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "Username": "Sebas",
+        "Password": "827ccb0eea8a706c4c34a16891f84e7b",
+        "Tasks": [
+            {
+                "ID": 1,
+                "Titulo": "Reto NextLine",
+                "Descripcion": "Completar el reto tecnico",
+                "Estatus": "En progreso",
+                "Fecha": "2021-12-05 23:59:59",
+                "Comentarios": "Todo bien",
+                "Responsable": "Sebas"
+            },
+            {
+                "ID": 50,
+                "Titulo": "Tarea 50",
+                "Descripcion": "Una tarea generica",
+                "Estatus": "Completado",
+                "Fecha": "2021-12-02 23:59:59",
+                "Comentarios": "Ya estuvo",
+                "Responsable": "Yo mero"
+            },
+            {
+                "ID": 2,
+                "Titulo": "Carrera",
+                "Descripcion": "Obtener titulo de ingenieria",
+                "Estatus": "En progreso",
+                "Fecha": "2022-12-10 12:00:00",
+                "Comentarios": "Ahi vamos",
+                "Responsable": "Sebas"
+            }
+        ]
+    }
+]
