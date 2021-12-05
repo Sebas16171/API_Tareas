@@ -11,6 +11,12 @@ Registrados en un archivo JSON que contendrá
 - Clave de acceso
 - Lista de tareas
 
+### Login
+El nombre de usuario y contraseña deben ser enviados por medio de un objeto JSON. El método post detectará si se ha enviado una tarea o un usuario
+Usuarios y contraseñas registrados para pruebas:
+- Sebas - 12345
+- Sebas Dos - password
+
 ## Tareas
 Registradas en JSON, cada una debajo de su respectivo usuario, contendrán:
 

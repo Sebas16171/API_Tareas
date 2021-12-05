@@ -1,9 +1,13 @@
 const { request, Router } = require("express");
 const router = Router();
 const _ = require('underscore');
+const md5 = require("blueimp-md5");
 
 //  TODO: Importar el usuario desde el login
-const tareas = require('../test-data.json')[0].Tasks;
+var active_user = 0;
+
+const usuarios = require('../test-data.json');
+var tareas = require('../test-data.json')[active_user].Tasks;
 
 router.get('/', (req, res) => {
     /* GET Todos los datos
@@ -38,12 +42,36 @@ router.post('/', (req, res) => {
                 + Titulo*       + Descripcion*
                 + Estatus*      + Fecha*
                 + Comentarios   + Responsable
-        Toma los datos enviados por el cliente para registrar una nueva tarea
-        Si los datos estan incompletos envia un error al cliente
+            Toma los datos enviados por el cliente para registrar una nueva tarea
+            Si los datos estan incompletos envia un error al cliente
+
+            O en su lugar...
+            - Objeto JSON: Los datos de autenticacion del usuario. Debe contener:
+                + user*         + pass
+            Toma los datos enviados por el cliente y busca al usuario entre los registrados
+            Si el usuario es encontrado, compara la clave registrada con la enviada por el cliente
+            En caso de que las claves coincidan, autentica al usuario e importa su lista de tareas 
+
     */
 
     const { Titulo, Descripcion, Estatus, Fecha, Comentarios, Responsable } = req.body;
-    if (Titulo && Descripcion && Estatus && Fecha) {
+    const { user, pass } = req.body;
+    if (user && pass){
+        _.each(usuarios, (usuario, i) => {
+            if (usuario.Username == user) {
+                if (usuario.Password == md5(pass)) {
+                    res.send(`Autenticado con el ID ${i}`);
+                    active_user = i;
+                    tareas = require('../test-data.json')[active_user].Tasks;
+                    return;
+                } else {
+                    res.send("Clave incorrecta");
+                    return;
+                }
+            }
+        });
+        res.send("Usuario no encontrado");
+    } else if (Titulo && Descripcion && Estatus && Fecha) {
         const id = tareas.length + 1;
         const nueva_tarea = {id, ...req.body};
         tareas.push(nueva_tarea);

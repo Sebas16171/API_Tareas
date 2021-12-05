@@ -31,5 +31,38 @@
                 "Responsable": "Sebas"
             }
         ]
+    },
+    {
+        "Username": "Sebas Dos",
+        "Password": "5f4dcc3b5aa765d61d8327deb882cf99",
+        "Tasks": [
+            {
+                "ID": 1,
+                "Titulo": "Subir nuevo commit",
+                "Descripcion": "Registrar los cambios y actualizar el codigo",
+                "Estatus": "Por terminar",
+                "Fecha": "2021-12-04 22:00:00",
+                "Comentarios": "Haciendo ultimos testeos",
+                "Responsable": "Sebas"
+            },
+            {
+                "ID": 2,
+                "Titulo": "Probar codigo mas reciente",
+                "Descripcion": "Poner a prueba el ultimo codigo escrito",
+                "Estatus": "En progreso",
+                "Fecha": "2021-12-04 21:45:00",
+                "Comentarios": "Codigo terminado esperando pruebas",
+                "Responsable": "Sebas "
+            },
+            {
+                "ID": 3,
+                "Titulo": "Actualiza README.md",
+                "Descripcion": "Actualizar datos del readme antes de realizar el siguiente commit",
+                "Estatus": "Por comenzar",
+                "Fecha": "2021-12-04 21:30:00",
+                "Comentarios": "Actualizar documentacion del login",
+                "Responsable": "Sebas"
+            }
+        ]
     }
 ]
